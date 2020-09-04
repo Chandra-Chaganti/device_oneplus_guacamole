@@ -20,4 +20,7 @@
 
     <!-- Whether the device has a popup camera -->
     <bool name="config_hasPopupCamera">true</bool>
+
+    <!-- Whether device supports in-display fingerprint when screen is turned off -->
+    <bool name="config_supportsInDisplayFingerprintGesture">true</bool>
 </resources>
