@@ -33,5 +33,16 @@ SOONG_CONFIG_ONEPLUS_MSMNILE_FOD_SIZE = 220
 # Properties
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
+# Partitions
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3640655872
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 243561590784
+BOARD_DTBOIMG_PARTITION_SIZE := 16777216
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
+# Recovery
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+
 # inherit from the proprietary version
 -include vendor/oneplus/guacamole/BoardConfigVendor.mk

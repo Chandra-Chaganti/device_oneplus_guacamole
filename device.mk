@@ -45,5 +45,9 @@ TARGET_SCREEN_WIDTH := 1440
 
 PRODUCT_SHIPPING_API_LEVEL := 28
 
+# Ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+
 # Inherit from oneplus sm8150-common
 $(call inherit-product, device/oneplus/sm8150-common/common.mk)
